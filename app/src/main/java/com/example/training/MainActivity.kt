@@ -10,11 +10,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn = findViewById<Button>(R.id.btnCustomStyle)
+        val customStyle = findViewById<Button>(R.id.btnCustomStyle)
+        val customShape = findViewById<Button>(R.id.btnCustomShape)
+        val customShape2 = findViewById<Button>(R.id.btnCustomShape2)
 
-        btn.setOnClickListener {
+        customStyle.setOnClickListener {
             val intent = Intent(this, CustomStyleForViews::class.java)
             startActivity(intent)
         }
+
+        customShape.setOnClickListener {
+            val intent = Intent(this, CustomShapes::class.java)
+            startActivity(intent)
+        }
+        customShape2.setOnClickListener {
+            val intent = Intent(this, CustomShapes2::class.java)
+            startActivity(intent)
+        }
+
     }
 }

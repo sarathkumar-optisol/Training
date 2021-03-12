@@ -13,9 +13,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CustomStyle"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomShape"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomShape"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomShape" />
+
+    <Button
+        android:id="@+id/btnCustomShape"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomShape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btnCustomShape2"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomShape"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomStyle"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomStyle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomStyle" />
 </androidx.constraintlayout.widget.ConstraintLayout>

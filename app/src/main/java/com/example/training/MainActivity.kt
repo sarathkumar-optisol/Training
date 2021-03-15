@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         val customStyle = findViewById<Button>(R.id.btnCustomStyle)
         val customShape = findViewById<Button>(R.id.btnCustomShape)
         val customShape2 = findViewById<Button>(R.id.btnCustomShape2)
+        val customFont = findViewById<Button>(R.id.btnCustomFont)
 
         customStyle.setOnClickListener {
             val intent = Intent(this, CustomStyleForViews::class.java)
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
         }
         customShape2.setOnClickListener {
             val intent = Intent(this, CustomShapes2::class.java)
+            startActivity(intent)
+        }
+        customFont.setOnClickListener {
+            val intent = Intent(this, CustomFont::class.java)
             startActivity(intent)
         }
 

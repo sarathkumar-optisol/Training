@@ -48,4 +48,26 @@
         app:layout_constraintEnd_toEndOf="@+id/btnCustomShape2"
         app:layout_constraintStart_toStartOf="@+id/btnCustomShape2"
         app:layout_constraintTop_toBottomOf="@+id/btnCustomShape2" />
+
+
+    <Button
+        android:id="@+id/btnFilkeSystemButton"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FileSystem"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomFont"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomFont"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomFont" />
+
+    <Button
+        android:id="@+id/btnDb"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Database"
+        app:layout_constraintEnd_toEndOf="@+id/btnFilkeSystemButton"
+        app:layout_constraintStart_toStartOf="@+id/btnFilkeSystemButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnFilkeSystemButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

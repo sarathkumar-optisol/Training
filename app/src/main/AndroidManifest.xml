@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".CustomFont"></activity>
+        <activity android:name=".Database"></activity>
+        <activity android:name=".FileSystem" />
+        <activity android:name=".CustomFont" />
         <activity android:name=".CustomStyleForViews" />
         <activity android:name=".CustomShapes" />
         <activity android:name=".CustomShapes2" />

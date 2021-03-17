@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         val customShape = findViewById<Button>(R.id.btnCustomShape)
         val customShape2 = findViewById<Button>(R.id.btnCustomShape2)
         val customFont = findViewById<Button>(R.id.btnCustomFont)
+        val fileSystembtn = findViewById<Button>(R.id.btnFilkeSystemButton)
+        val db = findViewById<Button>(R.id.btnDb)
 
         customStyle.setOnClickListener {
             val intent = Intent(this, CustomStyleForViews::class.java)
@@ -30,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         }
         customFont.setOnClickListener {
             val intent = Intent(this, CustomFont::class.java)
+            startActivity(intent)
+        }
+        fileSystembtn.setOnClickListener {
+            val intent = Intent(this, FileSystem::class.java)
+            startActivity(intent)
+        }
+        db.setOnClickListener {
+            val intent = Intent(this,Database::class.java)
             startActivity(intent)
         }
 

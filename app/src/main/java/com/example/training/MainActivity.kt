@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         val customFont = findViewById<Button>(R.id.btnCustomFont)
         val fileSystembtn = findViewById<Button>(R.id.btnFilkeSystemButton)
         val db = findViewById<Button>(R.id.btnDb)
+        val realmDatabase = findViewById<Button>(R.id.btnRealmDatabase)
 
         customStyle.setOnClickListener {
             val intent = Intent(this, CustomStyleForViews::class.java)
@@ -38,10 +39,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, FileSystem::class.java)
             startActivity(intent)
         }
+        realmDatabase.setOnClickListener {
+            val intent = Intent(this,RealmActivity::class.java)
+            startActivity(intent)
+        }
+
+
         db.setOnClickListener {
             val intent = Intent(this,Database::class.java)
             startActivity(intent)
         }
+
 
     }
 }

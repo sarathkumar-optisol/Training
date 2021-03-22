@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +48,11 @@ class MainActivity : AppCompatActivity() {
 
         db.setOnClickListener {
             val intent = Intent(this,Database::class.java)
+            startActivity(intent)
+        }
+
+        btnCamera.setOnClickListener {
+            val intent = Intent(this , CameraActivity::class.java)
             startActivity(intent)
         }
 

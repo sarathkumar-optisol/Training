@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.training">
 
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -10,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Training">
-        <activity android:name=".RealmActivity"></activity>
+        <activity android:name=".CameraActivity"></activity>
+        <activity android:name=".RealmActivity" />
         <activity android:name=".Database" />
         <activity android:name=".FileSystem" />
         <activity android:name=".CustomFont" />

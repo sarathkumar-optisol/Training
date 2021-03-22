@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_18"
+    tools:context=".RealmActivity">
+
+    <EditText
+        android:id="@+id/etRLMName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etRLMAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserName"
+        app:layout_constraintEnd_toEndOf="@+id/etRLMName"
+        app:layout_constraintStart_toStartOf="@+id/etRLMName"
+        app:layout_constraintTop_toBottomOf="@+id/etRLMName" />
+
+    <EditText
+        android:id="@+id/etRlmNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="UserEmail"
+        app:layout_constraintEnd_toEndOf="@+id/etRLMAge"
+        app:layout_constraintStart_toStartOf="@+id/etRLMAge"
+        app:layout_constraintTop_toBottomOf="@+id/etRLMAge" />
+
+    <Button
+        android:id="@+id/btnInsertRLMData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/main_activity_button"
+        android:text="Insert"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRlmNumber" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

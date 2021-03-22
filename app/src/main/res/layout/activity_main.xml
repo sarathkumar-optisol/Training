@@ -13,9 +13,84 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CustomStyle"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomShape"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomShape"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomShape" />
+
+    <Button
+        android:id="@+id/btnCustomShape"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomShape"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCustomShape2"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomShape"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomStyle"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomStyle"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomStyle" />
+
+
+    <Button
+        android:id="@+id/btnCustomFont"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CustomFont"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomShape2"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomShape2"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomShape2" />
+
+
+    <Button
+        android:id="@+id/btnFilkeSystemButton"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FileSystem"
+        app:layout_constraintEnd_toEndOf="@+id/btnCustomFont"
+        app:layout_constraintStart_toStartOf="@+id/btnCustomFont"
+        app:layout_constraintTop_toBottomOf="@+id/btnCustomFont" />
+
+    <Button
+        android:id="@+id/btnDb"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Database"
+        app:layout_constraintEnd_toEndOf="@+id/btnFilkeSystemButton"
+        app:layout_constraintStart_toStartOf="@+id/btnFilkeSystemButton"
+        app:layout_constraintTop_toBottomOf="@+id/btnFilkeSystemButton" />
+
+
+    <Button
+        android:id="@+id/btnRealmDatabase"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RealmDatabase"
+        app:layout_constraintEnd_toEndOf="@+id/btnDb"
+        app:layout_constraintStart_toStartOf="@+id/btnDb"
+        app:layout_constraintTop_toBottomOf="@+id/btnDb" />
+
+
+    <Button
+        android:id="@+id/btnCamera"
+        style="@style/main_activity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Camera"
+        app:layout_constraintEnd_toEndOf="@+id/btnRealmDatabase"
+        app:layout_constraintStart_toStartOf="@+id/btnRealmDatabase"
+        app:layout_constraintTop_toBottomOf="@+id/btnRealmDatabase" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

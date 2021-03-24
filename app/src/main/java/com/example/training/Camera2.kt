@@ -66,10 +66,9 @@ class Camera2 : AppCompatActivity() {
 
     }
 
-    //카메라 연결 상태 콜백
     private val mStateCallBack = object : CameraDevice.StateCallback() {
         override fun onOpened(camera: CameraDevice) {
-            //CameraDevice 객체 생성
+            //CameraDevice
             cameraDevice = camera
 
             //CaptureRequest.Builder 객체와 CaptureSession 객체 생성하여 미래보기 화면을 실행
@@ -151,18 +150,13 @@ class Camera2 : AppCompatActivity() {
         preview.surfaceTextureListener = mSurfaceTextureListener
     }
 
-    /**
-     * CameraManager 생성
-     * 카메라에 관한 정보 얻기
-     * openCamera() 메소드 호출 -> CameraDevice 객체 생성
-     */
+
     private fun openCamera(width: Int, height: Int) {
-        //카메라 매니저를 생성한다.
         manager = getSystemService(Context.CAMERA_SERVICE) as CameraManager?
-        //기본 카메라를 선택한다.
+
         val cameraId = manager!!.cameraIdList[0]
 
-        //카메라 특성을 가져오기
+
         val characteristics: CameraCharacteristics =
                 manager!!.getCameraCharacteristics(cameraId)
         val level = characteristics.get(CameraCharacteristics.INFO_SUPPORTED_HARDWARE_LEVEL)
@@ -191,9 +185,7 @@ class Camera2 : AppCompatActivity() {
         }
     }
 
-    /**
-     * Preview 시작
-     */
+
     private fun startPreview() {
         if (cameraDevice == null || !preview.isAvailable || mPreviewSize == null) {
             Log.e(tagName, "startPreview() fail, return")
@@ -220,9 +212,6 @@ class Camera2 : AppCompatActivity() {
         )
     }
 
-    /**
-     * 업데이트 Preview
-     */
     private fun updatePreview() {
         cameraDevice?.let {
             mPreviewBuilder!!.set(CaptureRequest.CONTROL_MODE, CaptureRequest.CONTROL_MODE_AUTO)
@@ -238,9 +227,7 @@ class Camera2 : AppCompatActivity() {
         }
     }
 
-    /**
-     * 사진 캡처
-     */
+
     private fun takePicture() {
         var jpegSizes: Array<Size>? = map?.getOutputSizes(ImageFormat.JPEG)
 
@@ -261,7 +248,6 @@ class Camera2 : AppCompatActivity() {
                 cameraDevice!!.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE)
         captureBuilder.addTarget(imageReader.surface)
 
-        //이미지가 캡처되는 순간에 제대로 사진 이미지가 나타나도록 3A를 자동으로 설정한다.
         captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO)
 
         val rotation = windowManager.defaultDisplay.rotation
@@ -269,7 +255,6 @@ class Camera2 : AppCompatActivity() {
 
         val file = File(Environment.getExternalStorageDirectory(), "pic.jpg")
 
-        // 이미지를 캡처할 때 자동으로 호출된다.
         val readerListener = object : ImageReader.OnImageAvailableListener {
             override fun onImageAvailable(reader: ImageReader?) {
                 imageReader?.let {
@@ -307,13 +292,11 @@ class Camera2 : AppCompatActivity() {
                     result: TotalCaptureResult
             ) {
                 super.onCaptureCompleted(session, request, result)
-                Toast.makeText(this@Camera2, "사진이 캡처되었습니다.", Toast.LENGTH_SHORT).show()
                 startPreview()
             }
         }
 
-        //사진 이미지를 캡처하는데 사용하는 CameraCaptureSession 생성한다.
-        // 이미 존재하면 기존 세션은 자동으로 종료
+
         cameraDevice!!.createCaptureSession(
                 outputSurfaces,
                 object : CameraCaptureSession.StateCallback() {
